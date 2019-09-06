@@ -68,7 +68,7 @@ int main()
 		//bhop
 		if (GetAsyncKeyState(VK_SPACE))
 		{
-			if (local.get_flags() == flags::on_ground || local.get_flags() == flags::on_ground_ducked || local.get_flags() == flags::in_water || local.get_flags() == flags::in_water_ducked)
+			if (local.get_flags() & FL_ONGROUND)
 				g_engine.force_jump();
 		}
 

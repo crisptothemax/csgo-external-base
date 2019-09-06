@@ -1,17 +1,12 @@
 #pragma once
 #include "functions.hpp"
 
-enum flags
-{
-	in_air = 256,
-	on_ground = 257,
-	on_ground_ducking = 261,
-	on_ground_ducked = 263,
-	in_water = 1281,
-	in_water_ducking = 1285,
-	in_water_ducked = 1287
 
-};
+//from sdk
+#define	FL_ONGROUND				(1<<0)	// At rest / on the ground
+#define FL_DUCKING				(1<<1)	// Player flag -- Player is fully crouched
+#define	FL_WATERJUMP			(1<<2)	// player jumping out of water
+#define	FL_INWATER				(1<<9)	// In water
 
 class c_base_entity
 {

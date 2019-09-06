@@ -1,7 +1,7 @@
 #pragma once
 #include <cstdint>
 
-// 2019-08-20 08:26:07.379932300 UTC
+// 2019-08-29 07:12:28.252596300 UTC
 
 namespace hazedumper {
 	constexpr ::std::int64_t timestamp = 1567062748;

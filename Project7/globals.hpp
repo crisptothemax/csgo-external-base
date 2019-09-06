@@ -2,8 +2,8 @@
 #include <Windows.h>
 
 //process
-extern int pID = 0;
-extern HANDLE pHandle = 0;
+extern int process_id = 0;
+extern HANDLE process_handle = 0;
 
 //modules
 extern DWORD client = 0;

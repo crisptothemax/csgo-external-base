@@ -6,6 +6,7 @@
 
 c_engine g_engine;
 
+//choke packets thread function
 void chokepackets()
 {
 	while (true)
@@ -23,11 +24,11 @@ void chokepackets()
 
 int main()
 {
-	//todo make func for all of this shit
-	attach();
-	client = get_module("client_panorama.dll");
-	engine = get_module("engine.dll");
-	client_state = rpm<DWORD>(engine + signatures::dwClientState);
+	//main startup function
+	if (!startup()) {
+		system("pause");
+		return 0;
+	}
 
 	glow team, enemy;
 
@@ -41,11 +42,15 @@ int main()
 		c_base_entity local = g_engine.get_localplayer();
 		glow_manager = rpm<DWORD>(client + signatures::dwGlowObjectManager);
 
+
+		//choke packets toggle key
 		if (GetAsyncKeyState(VK_NUMPAD5) & 1)
 		{
 			choke_packets = !choke_packets;
 		}
 
+
+		//getting class id of an entity (you can use this to differentiate entity from entity)
 		if (GetAsyncKeyState(VK_NUMPAD0) & 1)
 		{
 			system("cls");
@@ -59,12 +64,16 @@ int main()
 			}
 		}
 
+
+		//bhop
 		if (GetAsyncKeyState(VK_SPACE))
 		{
 			if (local.get_flags() == flags::on_ground || local.get_flags() == flags::on_ground_ducked || local.get_flags() == flags::in_water || local.get_flags() == flags::in_water_ducked)
 				g_engine.force_jump();
 		}
 
+
+		//glow
 		for (size_t x = 0; x <= g_engine.get_max_players(); x++)
 		{
 			c_base_entity entity = g_engine.get_entity_from_index(x);

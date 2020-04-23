@@ -7,6 +7,7 @@ The cheat has 3 examples:
 3. Glow hack.
 
 easy to use player structures
+
 ![](https://i.imgur.com/JUlzcV0.gif)
 
 ![preview](https://i.imgur.com/jKB5MEb.png)

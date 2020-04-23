@@ -6,7 +6,7 @@ The cheat has 3 examples:
 2. Simple bhop.
 3. Glow hack.
 
-easy to use player structures
+Easy to use player structures:
 
 ![](https://i.imgur.com/JUlzcV0.gif)
 

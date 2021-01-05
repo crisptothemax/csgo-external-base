@@ -118,7 +118,7 @@ bool startup()
 		return false;
 	}
 
-	client = get_module("client_panorama.dll");
+	client = get_module("client.dll");
 	engine = get_module("engine.dll");
 
 	if (!client || !engine)
